@@ -44,6 +44,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>design/css/cd-hero.css">
     <!-- Style Swicther -->
     <link id="style-switch" href="<?php echo base_url(); ?>design/css/presets/preset1.css" media="screen" rel="stylesheet" type="text/css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->

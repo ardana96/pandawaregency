@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title> MASJID AT TAQWA GABUGAN &trade;</title>
+    <title> PAGUYUBAN PANDAWA REGENCY 2 &trade;</title>
       <!-- Favicon-->
     <link rel="icon" href="<?php echo base_url(); ?>images/favicon.png" type="image/x-icon"/>
 

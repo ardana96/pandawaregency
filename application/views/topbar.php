@@ -39,6 +39,10 @@
                             <a href="<?php echo base_url();?>profile" >Profile </a>
                             
                         </li>
+                        <li <?php if ($topbar == 'Struktur') {echo 'class="dropdown active"';} ?>>
+                            <a href="<?php echo base_url();?>struktur" >Struktur </a>
+                            
+                        </li>
 
                         <li <?php if ($topbar == 'kegiatan') {echo 'class="dropdown active"';}  else {echo 'class="dropdown"';}?>>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kegiatan<!-- <i class="fa fa-angle-down"></i> --></a>

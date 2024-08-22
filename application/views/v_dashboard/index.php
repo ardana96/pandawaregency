@@ -95,154 +95,12 @@
     <section id="main-container">
         <div class="container">
 
+            
+
             <div class="row">
                 <div class="col-md-12 heading">
                     <span class="title-icon classic pull-left"><i class="fa fa-bookmark"></i></span>
-                    <h2 class="title classic">INFAK</h2>
-                </div>
-            </div>
-            <div class="row">
-
-                <!-- post image start -->
-                <?php foreach($infak_priority_view as $row){ ?>
-                <!-- Portfolio item slider start -->
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                    <!-- <div class="portfolio-slider">
-                        <div class="flexportfolio flexslider">
-                            <ul class="slides">
-                                <li><img src="images/portfolio/portfolio-bg1.jpg" alt=""></li>
-                                <li><img src="images/portfolio/portfolio-bg2.jpg" alt=""/></li>
-                                <li><img src="images/portfolio/portfolio-bg3.jpg" alt=""/></li>
-                            </ul>
-                        </div>
-                    </div> -->
-
-
-                     <div class="post-image-wrapper">
-                            <img src="<?php echo base_url(); ?>admin/images/donasi/<?= $row->photo  ?>" class="img-responsive" alt="" /> 
-
-                           <!-- <img src="design/images/portfolio/portfolio-bg1.jpg" class="img-responsive" alt="" /> -->
-                        </div><!-- post image end -->
-                </div>
-                <!-- Portfolio item slider end -->
-
-                <!-- sidebar start -->
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="sidebar">
-                        <div class="portfolio-desc">
-                            <h3 class="widget-title">Infak Pembangunan Masjid</h3>
-                            <p>
-                                <?= $row->ringkasan?>
-                            </p>
-                            <br/>
-
-                            <h3 class="widget-title">Detail</h3>
-                                <?php 
-                                $jumlah = $row->jumlah;
-                                $target = $row->target;
-                                $kurang = $target - $jumlah;
-                                $persen=(($jumlah)/($target))*100;
-                                $bulat = round($persen, 2);
-                                ?>
-
-                                <table style="font-weight: bold;color: black;">
-                                    <tr>
-                                        <td> Dari </td>
-                                        <td> : </td>
-                                        <td> Rp. <?= number_format($target,2) ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td> Terkumpul </td>
-                                        <td> : </td>
-                                        <td> Rp. <?= number_format($jumlah,2) ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td> Kurang </td>
-                                        <td> : </td>
-                                        <td> Rp. <?= number_format($kurang,2) ?></td>
-                                    </tr>           
-                                </table>
-                            <br/>
-                            
-                            <div class="containerskills">
-                                <div class="skills" style="font-size:14px;width:<?= $bulat; ?>%; background-color: #2196F3;">   <?=$bulat; ?>%
-                                </div>
-                            </div>
-                            <p><a href="<?= site_url('donasi/detail/'.$row->id); ?>" class="project-btn btn btn-primary">Yuk Berinfak.. </a></p>
-                        </div>
-                    </div>
-                </div>
-            <?php } ?>
-                <!-- sidebar end -->
-            </div><!-- Portfolio item row end -->
-
-             <!-- Divisi -->
-            <div class="row">
-                <div class="col-md-12 heading">
-                    <span class="title-icon classic pull-left"><i class="fa fa-bookmark"></i></span>
-                    <h2 class="title classic">DIVISI</h2>
-                </div>
-            </div>
-
-            <!-- divisi -->
-            <div class="row">
-                <?php foreach($divisi_view as $row){ ?>
-                <div class="col-md-4 col-sm-4 wow fadeInDown" data-wow-delay=".5s">
-                    <div class="service-content">
-                        <span class="service-image"><img class="img-responsive" src="<?php echo base_url(); ?>admin/images/divisi/<?= $row->divisi_det_photo?>" alt="" width=400 height=250></span>
-                        <a href=#><h3><?= $row->divisi_nama ?></h3></a>
-                        <p><?= $row->divisi_det_ringkasan ?></p>
-                    </div>
-                </div><!--/ End first service -->
-
-               <?php } ?>
-
-            </div><!-- Content Row end -->
-            <!-- divisi_end -->
-
-            <hr style="height:3px;border-width:0;color:gray;background-color:gray">
-            <!-- BUMM -->
-            <!-- <section id="main-container" class="portfolio portfolio-box">
-                <div class="container"> -->
-                    <div class="row">
-                        <div class="col-md-12 heading">
-                            <span class="title-icon classic pull-left"><i class="fa fa-bookmark"></i></span>
-                            <h2 class="title classic">BUMM</h2>
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        
-                        <div id="isotope" class="isotope">
-                            <?php foreach($bumm_view as $row){ ?>
-                            <div class="col-sm-3 web-design isotope-item">
-                                <div class="grid">
-                                    <figure class="effect-oscar">
-                                        <img src="<?php echo base_url(); ?>admin/images/bumm/<?= $row->bumm_photo?>"alt="" width=300 height=300>
-                                        <figcaption>
-                                            <h3><?= $row->bumm_produk ?> <br>Rp. <?= number_format($row->bumm_harga, 2)?></h3>
-
-                                            <a class="view icon-pentagon" href="<?= site_url('bumm/detail/'.$row->bumm_id); ?>"><i class="fa fa-list"></i></a>           
-                                        </figcaption>           
-                                    </figure>
-                                </div>
-                            </div><!-- Isotope item end -->
-
-                        <?php }?>
-                            
-                        </div><!-- Isotope content end -->
-                    </div><!-- Content row end -->
-                <!-- </div> --><!-- Container end -->
-            <!-- </section> --><!-- Portfolio end -->
-            <br>
-            <!-- end bumm -->
-            <hr style="height:4px;border-width:0;color:gray;background-color:gray">
-            <br>
-            <br>
-            <div class="row">
-                <div class="col-md-12 heading">
-                    <span class="title-icon classic pull-left"><i class="fa fa-bookmark"></i></span>
-                    <h2 class="title classic">KEGIATAN MASJID</h2>
+                    <h2 class="title classic">KEGIATAN PAGUYUBAN</h2>
                 </div>
             </div>
             <div class="row">
@@ -283,31 +141,12 @@
                             <p><?= $row->kegiatan_ringkasan ?></p>
                         </div>
                         <div class="post-footer">
-                            <a href="blog-item.html" class="btn btn-primary">Continue Reading <i class="fa fa-angle-double-right">&nbsp;</i></a>
+                            <a href="<?= site_url('kegiatan/detail/'.$row->kegiatan_id); ?>"class="btn btn-primary">Continue Reading <i class="fa fa-angle-double-right">&nbsp;</i></a>
                         </div>
                     </div><!-- 1st post end -->
 
                     <?php } ?>
-
-                    
-
-                   <!--  <div class="paging">
-                        <ul class="pagination">
-                          <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                          <li class="active"><a href="#">1</a></li>
-                          <li><a href="#">2</a></li>
-                          <li><a href="#">3</a></li>
-                          <li><a href="#">4</a></li>
-                          <li><a href="#">5</a></li>
-                          <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                        </ul>
-                    </div> -->
-
-
-
                 </div><!--/ Content col end -->
-                
-                <!-- sidebar start -->
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     
                     <div class="sidebar sidebar-right">
@@ -406,9 +245,171 @@
   
                     </div><!-- sidebar end -->
                 </div>
+            </div>
+
+             <!-- Divisi -->
+            <div class="row">
+                <div class="col-md-12 heading">
+                    <span class="title-icon classic pull-left"><i class="fa fa-bookmark"></i></span>
+                    <h2 class="title classic">DIVISI</h2>
+                </div>
+            </div>
+
+            <!-- divisi -->
+            <div class="row">
+                <?php foreach($divisi_view as $row){ ?>
+                <div class="col-md-4 col-sm-4 wow fadeInDown" data-wow-delay=".5s">
+                    <div class="service-content">
+                        <span class="service-image"><img class="img-responsive" src="<?php echo base_url(); ?>admin/images/divisi/<?= $row->divisi_det_photo?>" alt="" width=400 height=250></span>
+                        <a href=#><h3><?= $row->divisi_nama ?></h3></a>
+                        <p><?= $row->divisi_det_ringkasan ?></p>
+                    </div>
+                </div><!--/ End first service -->
+
+               <?php } ?>
+
+            </div><!-- Content Row end -->
+            <!-- divisi_end -->
+
+            <hr style="height:3px;border-width:0;color:gray;background-color:gray">
+            <!-- BUMM -->
+            <!-- <section id="main-container" class="portfolio portfolio-box">
+                <div class="container"> -->
+                    <div class="row">
+                        <div class="col-md-12 heading">
+                            <span class="title-icon classic pull-left"><i class="fa fa-bookmark"></i></span>
+                            <h2 class="title classic">GALLERY</h2>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        
+                        <div id="isotope" class="isotope">
+                            <?php foreach($bumm_view as $row){ ?>
+                            <div class="col-sm-3 web-design isotope-item">
+                                <div class="grid">
+                                    <figure class="effect-oscar">
+                                        <img src="<?php echo base_url(); ?>admin/images/bumm/<?= $row->bumm_photo?>"alt="" width=300 height=300>
+                                        <figcaption>
+                                            <h3><?= $row->bumm_produk ?> <br>Rp. <?= number_format($row->bumm_harga, 2)?></h3>
+
+                                            <a class="view icon-pentagon" href="<?= site_url('bumm/detail/'.$row->bumm_id); ?>"><i class="fa fa-list"></i></a>           
+                                        </figcaption>           
+                                    </figure>
+                                </div>
+                            </div><!-- Isotope item end -->
+
+                        <?php }?>
+                            
+                        </div><!-- Isotope content end -->
+                    </div><!-- Content row end -->
+                <!-- </div> --><!-- Container end -->
+            <!-- </section> --><!-- Portfolio end -->
+            <br>
+            <!-- end bumm -->
+            <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+            <br>
+            <br>
+            
+            <div class="row">
+                <div class="col-md-12 heading">
+                    <span class="title-icon classic pull-left"><i class="fa fa-bookmark"></i></span>
+                    <h2 class="title classic">DONASI</h2>
+                </div>
+            </div>
+            <div class="row">
+
+                <!-- post image start -->
+                <?php foreach($infak_priority_view as $row){ ?>
+                <!-- Portfolio item slider start -->
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <!-- <div class="portfolio-slider">
+                        <div class="flexportfolio flexslider">
+                            <ul class="slides">
+                                <li><img src="images/portfolio/portfolio-bg1.jpg" alt=""></li>
+                                <li><img src="images/portfolio/portfolio-bg2.jpg" alt=""/></li>
+                                <li><img src="images/portfolio/portfolio-bg3.jpg" alt=""/></li>
+                            </ul>
+                        </div>
+                    </div> -->
 
 
-            </div><!--/ row end -->
+                     <div class="post-image-wrapper">
+                            <img src="<?php echo base_url(); ?>admin/images/donasi/<?= $row->photo  ?>" class="img-responsive" alt="" /> 
+
+                           <!-- <img src="design/images/portfolio/portfolio-bg1.jpg" class="img-responsive" alt="" /> -->
+                        </div><!-- post image end -->
+                </div>
+                <!-- Portfolio item slider end -->
+
+                <!-- sidebar start -->
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="sidebar">
+                        <div class="portfolio-desc">
+                            <h3 class="widget-title"><?= $row->nama?></h3>
+                            <p>
+                                <?= $row->ringkasan?>
+                            </p>
+                            <br/>
+
+                            <h3 class="widget-title">Detail</h3>
+                                <?php 
+                                $jumlah = $row->jumlah;
+                                $target = $row->target;
+                                $kurang = $target - $jumlah;
+                                $persen=(($jumlah)/($target))*100;
+                                $bulat = round($persen, 2);
+                                ?>
+
+                                <table style="font-weight: bold;color: black;">
+                                    <tr>
+                                        <td> Dari </td>
+                                        <td> : </td>
+                                        <td> Rp. <?= number_format($target,2) ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td> Terkumpul </td>
+                                        <td> : </td>
+                                        <td> Rp. <?= number_format($jumlah,2) ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td> Kurang </td>
+                                        <td> : </td>
+                                        <td> Rp. <?= number_format($kurang,2) ?></td>
+                                    </tr>           
+                                </table>
+                            <br/>
+                            
+                            <div class="containerskills">
+                                <div class="skills" style="font-size:14px;width:<?= $bulat; ?>%; background-color: #2196F3;">   <?=$bulat; ?>%
+                                </div>
+                            </div>
+                            <p><a href="<?= site_url('donasi/detail/'.$row->id); ?>" class="project-btn btn btn-primary">Yuk Berinfak.. </a></p>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+                <!-- sidebar end -->
+            </div>
+
+                    
+
+                   <!--  <div class="paging">
+                        <ul class="pagination">
+                          <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                          <li class="active"><a href="#">1</a></li>
+                          <li><a href="#">2</a></li>
+                          <li><a href="#">3</a></li>
+                          <li><a href="#">4</a></li>
+                          <li><a href="#">5</a></li>
+                          <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                        </ul>
+                    </div> -->
+
+
+
+                
+                
 
 
 
