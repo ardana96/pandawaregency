@@ -41,44 +41,55 @@ class Divisi_detail extends CI_Controller {
 	function divisi_detail_add()
 	{
 		$tanggal = date('Y-m-d');
+		$tes = 'tes';
 		$config['upload_path']      = './images/divisi';
-        $config['allowed_types']    = 'jpg|jpeg';
+        $config['allowed_types']    = 'jpg|jpeg|png';
         $config['file_name']        = 'divisi-'.trim(str_replace(" ","",date('dmYHis')));
         //$config['file_name']        = $this->input->post('filephoto');
         $config['max_size']         = '10000';
 
-		 var_dump($this->input->post('divisi_id'));
+		 //var_dump($this->input->post('divisi_id'));
 		$this->load->library('upload');
 		$this->upload->initialize($config);
 
 		if(!empty($_FILES['filephoto']['name']))
 		{
+			//var_dump($this->upload->do_upload());
 			if ($this->upload->do_upload('filephoto'))
             {
+				
     	        $gbr = $this->upload->data();
 
-                $config['image_library']='gd2';
-                $config['source_image']='./images/user'.$gbr['file_name'];
-                $config['create_thumb']= FALSE;
-                $config['maintain_ratio']= FALSE;
-                $config['quality']= '70%';
-                $config['new_image']= './images/produk'.$gbr['file_name'];
-                $this->load->library('image_lib', $config);
-                $this->image_lib->resize();
+                // $config['image_library']='gd2';
+                // $config['source_image']='./images/user'.$gbr['file_name'];
+                // $config['create_thumb']= FALSE;
+                // $config['maintain_ratio']= FALSE;
+                // $config['quality']= '70%';
+                // $config['new_image']= './images/produk'.$gbr['file_name'];
+                // $this->load->library('image_lib', $config);
+                // $this->image_lib->resize();
 
 				$params = array(
 				    	
 						
 						'divisi_det_ringkasan'=>$this->input->post('divisi_det_ringkasan'),
-						'divisi_det_isi'=>$this->input->post('divisi_det_isi'),
+						//'divisi_det_isi'=>$this->input->post('divisi_det_isi'),
+						'divisi_det_isi'=>$tes,
 						'created_date' =>$tanggal,
 						'created_by' => $this->sesnama,
+						'modified_date' =>$tanggal,
+						'modified_by' => $this->sesnama,
 						'divisi_id'=>$this->input->post('divisi_id'),
 						'divisi_det_photo' => $gbr['file_name']
 				);
 
+			
 				$this->Divisi_detail_model->divisi_detail_add($params);
+				//var_dump($this->Divisi_detail_model->divisi_detail_add($params));
 				redirect('divisi_detail');
+			}else{
+				//var_dump('test');
+
 			}
 
 		} else {
@@ -195,8 +206,8 @@ class Divisi_detail extends CI_Controller {
 			        
 			        $this->Divisi_detail_model->divisi_detail_update($divisi_detail_id,$params);
 			        $lok='images/divisi/'.$divisi_detail['divisi_det_photo'];
-					var_dump($lok);
-       				unlink($lok);
+					//var_dump($lok);
+       				//unlink($lok);
 					redirect('divisi_detail/divisi_detail_edit/'.$divisi_detail_id);
 
 		        } else {

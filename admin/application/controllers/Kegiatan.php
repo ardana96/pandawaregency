@@ -55,6 +55,7 @@ class Kegiatan extends CI_Controller {
 
 		if(!empty($_FILES['filephoto']['name']))
 		{
+			//var_dump($this->upload->do_upload('filephoto'));
 			if ($this->upload->do_upload('filephoto'))
             {
     	        $gbr = $this->upload->data();

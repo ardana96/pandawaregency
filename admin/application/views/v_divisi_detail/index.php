@@ -87,12 +87,12 @@
                         </div>
                     </div>
 
-                    <div class="body">
+                    <!-- <div class="body">
                         <textarea id="tinymce" name="divisi_det_isi" 
                         required oninvalid="this.setCustomValidity('Mohon Diisi Terlebih Dahulu')">
                           
                         </textarea>
-                    </div>
+                    </div> -->
 
                     
 

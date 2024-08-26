@@ -87,9 +87,12 @@ CREATE TABLE `divisi_detail` (
   `modified_date` date DEFAULT NULL,
   `modified_by` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`divisi_det_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 /*Data for the table `divisi_detail` */
+
+insert  into `divisi_detail`(`divisi_det_id`,`divisi_det_ringkasan`,`divisi_det_isi`,`divisi_det_photo`,`created_date`,`divisi_id`,`created_by`,`modified_date`,`modified_by`) values 
+(7,'KETUA','                                      tes                                        ','divisi-26082024113240.png','2024-08-26',7,'admin','2024-08-26','admin');
 
 /*Table structure for table `donasi` */
 
@@ -191,12 +194,14 @@ CREATE TABLE `kegiatan` (
   `modified_by` varchar(50) DEFAULT NULL,
   `modified_date` date DEFAULT NULL,
   PRIMARY KEY (`kegiatan_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 /*Data for the table `kegiatan` */
 
 insert  into `kegiatan`(`kegiatan_id`,`kegiatan_nama`,`kegiatan_ringkasan`,`kegiatan_isi`,`kegiatan_photo`,`kegiatan_tanggal`,`created_date`,`kategori_id`,`created_by`,`modified_by`,`modified_date`) values 
-(17,'Kerja Bakti Pada Untuk HUT RI','Kerja Bakti Dilaksanakan Untuk membersih kan dan mengecor Letter H','                          \r\n                        ','kegiatan-13082024094851.jpeg','2024-08-13','2024-08-13',14,'admin','admin','2024-08-13');
+(17,'Kerja Bakti Pada Untuk HUT RI','Kerja Bakti Dilaksanakan Untuk membersih kan dan mengecor Letter H','                          \r\n                        ','kegiatan-13082024094851.jpeg','2024-08-13','2024-08-13',14,'admin','admin','2024-08-13'),
+(18,'tes','aaa','                          \r\n                        ','kegiatan-23082024110703.jpeg','2024-08-23','2024-08-23',14,'admin','admin','2024-08-23'),
+(19,'tessss','sss','                          \r\n                        ','kegiatan-26082024113018.jpeg','2024-08-26','2024-08-26',14,'admin','admin','2024-08-26');
 
 /*Table structure for table `level` */
 
