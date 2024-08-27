@@ -57,19 +57,12 @@ insert  into `divisi`(`divisi_id`,`divisi_nama`,`divisi_ket`,`user_id`) values
 (8,'SEKRETARIS','',8),
 (9,'PENGAWAS KEUANGAN','',8),
 (10,'SEKRETARIS SRIKANDI','',8),
-(11,'BENDAHARA 1','',8),
-(12,'BENDAHARA 2','',8),
-(13,'BENDAHARA 3','',8),
+(11,'BENDAHARA','',8),
 (14,'KOORDINASI SRIKANDI','',8),
 (15,'PENGGIAT PROGRAM SRIKANDI','',8),
 (16,'PENYALUR IDE IT / TEKNOLOGI','',8),
-(17,'HUMAS 1','',8),
-(18,'HUMAS 2','',8),
-(19,'HUMAS 3','',8),
-(20,'HUMAS 4','',8),
-(21,'KEAMANAN LINGKUNGAN 1','',8),
-(22,'KEAMANAN LINGKUNGAN 2','',8),
-(23,'KEAMANAN LINGKUNGAN 3','',8),
+(17,'HUMAS','',8),
+(21,'KEAMANAN LINGKUNGAN','',8),
 (24,'PEMBINA KEBERSIHAN','',8);
 
 /*Table structure for table `divisi_detail` */
@@ -86,13 +79,33 @@ CREATE TABLE `divisi_detail` (
   `created_by` varchar(50) DEFAULT NULL,
   `modified_date` date DEFAULT NULL,
   `modified_by` varchar(50) DEFAULT NULL,
+  `nama` varchar(50) DEFAULT NULL,
+  `jabatan` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`divisi_det_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 /*Data for the table `divisi_detail` */
 
-insert  into `divisi_detail`(`divisi_det_id`,`divisi_det_ringkasan`,`divisi_det_isi`,`divisi_det_photo`,`created_date`,`divisi_id`,`created_by`,`modified_date`,`modified_by`) values 
-(7,'KETUA','                                      tes                                        ','divisi-26082024113240.png','2024-08-26',7,'admin','2024-08-26','admin');
+insert  into `divisi_detail`(`divisi_det_id`,`divisi_det_ringkasan`,`divisi_det_isi`,`divisi_det_photo`,`created_date`,`divisi_id`,`created_by`,`modified_date`,`modified_by`,`nama`,`jabatan`) values 
+(10,NULL,'tes','divisi-27082024101906.png','2024-08-27',7,'admin','2024-08-27','admin','Bapak Teguh Wahyudi','KETUA'),
+(11,NULL,'tes','divisi-27082024103102.png','2024-08-27',8,'admin','2024-08-27','admin','Bapak DENI','SEKRETARIS'),
+(12,NULL,'tes','divisi-27082024103202.png','2024-08-27',9,'admin','2024-08-27','admin','Bapak GUNTORO','PENGAWAS KEUANGAN'),
+(13,NULL,'tes','divisi-27082024103321.png','2024-08-27',10,'admin','2024-08-27','admin','Ibu Sukma','SEKRETARIS SRIKANDI'),
+(14,NULL,'tes','divisi-27082024103355.png','2024-08-27',11,'admin','2024-08-27','admin','Ibu Atik','Bendahara 1'),
+(15,NULL,'tes','divisi-27082024103441.png','2024-08-27',11,'admin','2024-08-27','admin','Ibu Dwi','Bendahara 2 (Kas Jimpitan)'),
+(16,NULL,'tes','divisi-27082024103553.png','2024-08-27',11,'admin','2024-08-27','admin','Ibu Riska','Bendahara 3 ( Kas Pertemuan )'),
+(17,NULL,'tes','divisi-27082024103737.png','2024-08-27',14,'admin','2024-08-27','admin','Ibu Septiani',''),
+(18,NULL,'tes','divisi-27082024103832.png','2024-08-27',14,'admin','2024-08-27','admin','Ibu Daning',''),
+(19,NULL,'tes','divisi-27082024103850.png','2024-08-27',14,'admin','2024-08-27','admin','Ibu Riska',''),
+(20,NULL,'tes','divisi-27082024103933.png','2024-08-27',16,'admin','2024-08-27','admin','Bapak Gama',''),
+(21,NULL,'tes','divisi-27082024104044.png','2024-08-27',17,'admin','2024-08-27','admin','Bapak Boiran','HUMAS 1'),
+(22,NULL,'tes','divisi-27082024104108.png','2024-08-27',17,'admin','2024-08-27','admin','Bapak Basir','Humas 2'),
+(23,NULL,'tes','divisi-27082024104138.png','2024-08-27',17,'admin','2024-08-27','admin','Bapak Mulyono','Humas 3'),
+(24,NULL,'tes','divisi-27082024104207.png','2024-08-27',17,'admin','2024-08-27','admin','Bapak Priyo','Humas 4'),
+(25,NULL,'tes','divisi-27082024104309.png','2024-08-27',21,'admin','2024-08-27','admin','Bapak Heri Eko','Ling Blok A&C'),
+(26,NULL,'tes','divisi-27082024104339.png','2024-08-27',21,'admin','2024-08-27','admin','Bapak Heri','Ling Blok A&B'),
+(27,NULL,'tes','divisi-27082024104402.png','2024-08-27',21,'admin','2024-08-27','admin','Bapak Nico','Ling Blok C'),
+(28,NULL,'tes','divisi-27082024104435.png','2024-08-27',24,'admin','2024-08-27','admin','Bapak Nasikun','');
 
 /*Table structure for table `donasi` */
 

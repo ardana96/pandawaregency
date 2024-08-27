@@ -4,9 +4,9 @@
 			<!-- Subpage title start -->
 			<div class="banner-title-content">
 	        	<div class="text-center">
-		        	<h2>MASJID AT TAQWA</h2>
+		        	<h2>PAGUYUBAN PANDAWA REGENCY 2</h2>
 		        	<ul class="breadcrumb">
-			            <li>Jl.Gabugan-Gemolong KM No.1, Kebayanan 1, Gabugan,Sragen,</li>
+			            <li>Dukuh Sayangan, Ds Wonorejo, Polokarto, Sukoharjo</li>
 			            
 		          	</ul>
 	          	</div>

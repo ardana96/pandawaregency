@@ -80,6 +80,8 @@ class Divisi_detail extends CI_Controller {
 						'modified_date' =>$tanggal,
 						'modified_by' => $this->sesnama,
 						'divisi_id'=>$this->input->post('divisi_id'),
+						'nama' => $this->input->post('nama'),
+						'jabatan' => $this->input->post('jabatan'),
 						'divisi_det_photo' => $gbr['file_name']
 				);
 
@@ -122,8 +124,8 @@ class Divisi_detail extends CI_Controller {
 		$tanggal = date('Y-m-d');
 		$params = array(
 				'divisi_id' => $this->input->post('divisi_id'),
-				'divisi_det_ringkasan'=>$this->input->post('divisi_det_ringkasan'),
-				'divisi_det_isi'=>$this->input->post('divisi_det_isi'),
+				'nama' => $this->input->post('nama'),
+				'jabatan' => $this->input->post('jabatan'),
 				'modified_date' =>$tanggal,
 				'modified_by' => $this->sesnama,
 			);

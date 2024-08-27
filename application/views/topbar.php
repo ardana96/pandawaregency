@@ -57,8 +57,8 @@
                             </div>
                         </li>
 
-                        <li <?php if ($topbar == 'divisi') {echo 'class="dropdown active"';}  else {echo 'class="dropdown"';}?>>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Divisi<!-- <i class="fa fa-angle-down"></i> --></a>
+                        <!-- <li <?php if ($topbar == 'divisi') {echo 'class="dropdown active"';}  else {echo 'class="dropdown"';}?>>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Divisi</a>
                             <div class="dropdown-menu">
                                 <ul>
                                     <li><a href="<?php echo base_url();?>divisi">All Division</a></li>
@@ -68,7 +68,7 @@
                                    <?php }?>
                                 </ul>
                             </div>
-                        </li>
+                        </li> -->
                        
                         <li><a href="contact.html">Contact</a></li>
                     </ul>

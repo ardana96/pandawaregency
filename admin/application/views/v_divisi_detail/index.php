@@ -20,8 +20,9 @@
                         <thead>
                             <tr>
                                 <th>NO</th>
-                                <th>NAME DIVISI</th>
-                                <th>RINGKASAN</th>  
+                                <th>STRUKTUR</th>
+                                <th>NAMA PENGURUS</th>
+                                <th>JABATAN</th>
                                 <th>AKSI</th>             
                             </tr>
                         </thead>
@@ -31,6 +32,8 @@
                             <tr>
                                 <td><?= $no++;?></td>
                                 <td><?= $row->divisi_nama ?></td>
+                                <td><?= $row->nama ?></td>
+                                <td><?= $row->jabatan ?></td>
                                 <td><?= $row->divisi_det_ringkasan ?></td>
                                 
                           
@@ -78,14 +81,26 @@
                             </select>
                         </div>
                     </div>
-                    
-                     <label>Ringkasan</label>
+
+                    <div class="form-group form-float">
+                        <div class="form-line">
+                            <input type="text" name="nama" id="nama" required="required" class="form-control">
+                            <label class="form-label">NAMA</label>
+                        </div>
+                    </div>
+                    <div class="form-group form-float">
+                        <div class="form-line">
+                            <input type="text" name="jabatan" id="jabatan" class="form-control">
+                            <label class="form-label">JABATAN</label>
+                        </div>
+                    </div>
+                     <!-- <label>Ringkasan</label>
                      <div class="form-group">
                         <div class="form-line">
                             <textarea rows="4" name="divisi_det_ringkasan" class="form-control no-resize" placeholder="Keterangan" 
                             required></textarea>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- <div class="body">
                         <textarea id="tinymce" name="divisi_det_isi" 

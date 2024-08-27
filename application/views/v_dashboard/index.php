@@ -248,15 +248,15 @@
             </div>
 
              <!-- Divisi -->
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md-12 heading">
                     <span class="title-icon classic pull-left"><i class="fa fa-bookmark"></i></span>
                     <h2 class="title classic">DIVISI</h2>
                 </div>
-            </div>
+            </div> -->
 
             <!-- divisi -->
-            <div class="row">
+            <!-- <div class="row">
                 <?php foreach($divisi_view as $row){ ?>
                 <div class="col-md-4 col-sm-4 wow fadeInDown" data-wow-delay=".5s">
                     <div class="service-content">
@@ -264,18 +264,18 @@
                         <a href=#><h3><?= $row->divisi_nama ?></h3></a>
                         <p><?= $row->divisi_det_ringkasan ?></p>
                     </div>
-                </div><!--/ End first service -->
+                </div>
 
                <?php } ?>
 
-            </div><!-- Content Row end -->
+            </div> -->
             <!-- divisi_end -->
 
-            <hr style="height:3px;border-width:0;color:gray;background-color:gray">
+            <!-- <hr style="height:3px;border-width:0;color:gray;background-color:gray"> -->
             <!-- BUMM -->
             <!-- <section id="main-container" class="portfolio portfolio-box">
                 <div class="container"> -->
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-md-12 heading">
                             <span class="title-icon classic pull-left"><i class="fa fa-bookmark"></i></span>
                             <h2 class="title classic">GALLERY</h2>
@@ -297,12 +297,12 @@
                                         </figcaption>           
                                     </figure>
                                 </div>
-                            </div><!-- Isotope item end -->
+                            </div>
 
                         <?php }?>
                             
-                        </div><!-- Isotope content end -->
-                    </div><!-- Content row end -->
+                        </div>
+                    </div> -->
                 <!-- </div> --><!-- Container end -->
             <!-- </section> --><!-- Portfolio end -->
             <br>

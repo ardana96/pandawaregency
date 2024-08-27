@@ -6,8 +6,7 @@ class Divisi_model extends CI_Model
 
 	function divisi_view()
 	{
-		$sql = "SELECT * FROM  divisi d
-				INNER JOIN divisi_detail dd ON d.divisi_id = dd.divisi_id 
+		$sql = "SELECT * FROM  divisi 
 				 ";
 
 				return $this->db->query($sql)->result();
@@ -21,6 +20,16 @@ class Divisi_model extends CI_Model
 
 				return $this->db->query($sql)->row_array();
 	}
+
+	function divisi_detail_all()
+	{
+		$sql = "SELECT * FROM  divisi d
+				INNER JOIN divisi_detail dd ON d.divisi_id = dd.divisi_id 
+				 ";
+
+				return $this->db->query($sql)->result();
+	}
+	
 	
 	
 }

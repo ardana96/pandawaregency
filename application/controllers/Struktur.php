@@ -31,6 +31,7 @@ class Struktur extends CI_Controller {
 		
 		
 		$data['divisi_view'] = $this->Divisi_model->divisi_view();
+		$data['divisi_detail_all'] = $this->Divisi_model->divisi_detail_all();
 		//$data['kegiatan_kategori_view'] = $this->Kegiatan_model->kegiatan_kategori_view();
 
 		// $data['jumlah_kegiatan'] = $this->Profile_model->jumlah_kegiatan();

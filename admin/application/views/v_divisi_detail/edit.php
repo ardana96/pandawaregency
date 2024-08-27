@@ -47,15 +47,30 @@
                                     </select>
                                 </div>
                             </div>
-                            <label>RINGKASAN</label>
+
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="text" class="form-control" name="nama" required="required" value="<?php echo $divisi_detail['nama'];  ?>">
+
+                                    <label class="form-label">NAMA</label>
+                                </div>
+                             </div>
+                             <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="text" class="form-control" name="jabatan" value="<?php echo $divisi_detail['jabatan'];  ?>">
+
+                                    <label class="form-label">JABATAN</label>
+                                </div>
+                             </div>
+                            <!-- <label>RINGKASAN</label>
                              <div class="form-group">
                                 <div class="form-line">
                                     <textarea rows="10" name="divisi_det_ringkasan" class="form-control no-resize"><?php echo $divisi_detail['divisi_det_ringkasan']; ?></textarea>
                                 </div>
-                            </div>
+                            </div> -->
 
 
-                            <label>ISI</label>
+                            <!-- <label>ISI</label>
                             <div class="form-group form-float">
                                 <div class="form-line">
                                     <div class= body>
@@ -64,7 +79,7 @@
                                         </textarea>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
 
                             
